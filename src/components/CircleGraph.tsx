@@ -1,24 +1,15 @@
 import { FC } from 'react';
 
-type Props = {
-    speed: number;
-    strokeWidth: number;
-    circleSize: number;
-    percentage: number;
-    innerRotate?: number;
-    maxPercentageInView?: number;
-    bodyColor?: string;
-    strokeColor?: string;
-    percentageUppercase?: boolean
-    showpercentage?: boolean;
-};
+import { CircleGraphProps } from '../types/component';
+
+type Props = Partial<CircleGraphProps>;
 
 const CircleGraph:FC<Props> = (props) => {
   const {
-    speed,
-    strokeWidth,
-    circleSize,
-    percentage,
+    speed = 2,
+    strokeWidth = 5,
+    circleSize = 200,
+    percentage = 0,
     showpercentage,
     percentageUppercase,
     innerRotate = 0,

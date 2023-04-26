@@ -1,13 +1,10 @@
 import { FC } from 'react';
+import { StatInfoProps } from '../types/component';
 
-type Props = {
-    title: string;
-    current: number;
-    max: number;
-};
+type Props = Partial<StatInfoProps>;
 
 const StatInfo: FC<Props> = (props) => {
-    const { title, current, max } = props;
+    const { title = '', current = 0, max = 0 } = props;
 
     const getNumberStyled = (num: number): string => {
         const x = `${num}`.split('');
