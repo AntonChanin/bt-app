@@ -1,12 +1,12 @@
-import CircleGraph from './components/CircleGraph'
-import './App.css'
+import DoubleCircleGraph from './components/DoubleCircleGraph';
+import './App.css';
 
 function App() {
   return (
-    <>
-      <CircleGraph strokeWidth={5} circleSize={200} percentage={9} showpercentage speed={2} />
-    </>
-  )
+    <div>
+      <DoubleCircleGraph />
+    </div>
+  );
 }
 
-export default App
+export default App;
