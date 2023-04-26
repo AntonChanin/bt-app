@@ -47,13 +47,10 @@ const DoubleCircleGraph: FC<Props> = (props) => {
     } = props;
 
     return (
-        <>
-            <div
-            className="graph-and-stat"
-            style={{
-                margin: 'auto',
-            }}
-            >
+        <div className="double-graph"
+            style={{ height: (outerGraph.circleSize ?? 200) * 6/5 }}
+        >
+            <div className="graph-and-stat">
             <div className="outer-graph">
                 <CircleGraph {...outerGraph} />
             </div>
@@ -70,7 +67,7 @@ const DoubleCircleGraph: FC<Props> = (props) => {
             <StatInfo {...outerGraphInfo} />
             <StatInfo {...innerGraphInfo} />
             </div>
-      </>
+      </div>
     );
 };
 
