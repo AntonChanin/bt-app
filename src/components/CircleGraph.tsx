@@ -21,7 +21,7 @@ const CircleGraph:FC<Props> = (props) => {
   const toDasharray = circleSize * 3.14;
   const innerRadius = circleSize / 2 - strokeWidth / 2;
   const outerRadius = circleSize / 2;
-  const scale = innerRadius / outerRadius
+  const scale = innerRadius / outerRadius;
   const localPercentage = Math.floor(3.14 * (percentage * maxPercentageInView) * scale * (circleSize / 100));
   const localMaxPercentage = Math.floor(3.14 * (100 * maxPercentageInView) * scale * (circleSize / 100));
   const uniqueModifier = Math.floor(Math.random() * 100000);
